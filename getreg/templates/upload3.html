@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="text-align: center;color: tan;margin-bottom: 5%;font-size: 30px;">Uploaded</h2>
+
+<div id="exe">
+<button class="w3-button w3-white w3-border w3-border-red w3-round-large" style="font-size: 20px;" onclick="location.href='{% url 'script' %}', showdl(), hideex()">Convert</button>
+        {% if data %}
+
+        {{data | safe}}
+
+        {% endif %}
+</div>
+
+
+
+{% endblock %}

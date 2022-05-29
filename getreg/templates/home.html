@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Python button script
+        </title>
+    </head>
+    <body>
+        <h1>Upload your gradeses</h1>
+        <form action="/action_page.php" enctype="multipart/form-data">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+          </form>
+
+        <button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
+        {% if data %}
+        
+        {{data | safe}}
+
+        {% endif %}
+        <a  href="../../output/rg-ready.csv" download> Download Document </a>
+        </body>
+</html>

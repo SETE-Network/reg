@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="text-align:left;margin: 2% 0% 0% 6%;font-size: 16px;font-weight: bold;text-decoration:underline;"><a href="http://malsamaraiee.pythonanywhere.com/upload" target="">Back to converter</a></div>
+<h2 style="text-align: center;color: tan;margin-bottom: 5%;font-size: 30px;">Done!</h2>
+
+<div class="dl-but">
+<a href="http://malsamaraiee.pythonanywhere.com/static/rg-ready.xlsx"><button class="w3-button w3-block w3-red" style="font-size: 20px;width:50%;margin: 0 auto;">Download Reg-ready</button></a>
+        {% if data %}
+
+        {{data | safe}}
+
+        {% endif %}
+</div>
+
+
+{% endblock %}

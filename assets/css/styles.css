@@ -1,0 +1,37 @@
+body{
+    background: white;
+    margin-top:10%;
+}
+
+.uppy
+{
+    text-align: center;
+}
+
+.formy
+{
+    font-size: 20px;
+}
+
+.exe
+{
+    text-align: center;
+    margin-top: 2%;
+    display: ;
+}
+
+.dl-but
+{
+    text-align: center;
+    margin-top: 5%;
+    display: ;
+}
+
+a:dl-but
+{
+    text-decoration: none;
+}
+
+a:link {
+   text-decoration: none;
+}

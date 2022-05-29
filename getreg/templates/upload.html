@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="text-align: center;color: tan;margin-bottom: 5%;font-size: 30px;">Easy Reg</h2>
+<div class="uppy">
+<form  type="button" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<p>1.Choose your Gradebook <span style="color:red;">(make sure it is a CSV)</span></p><input class="formy" type="file" name="document"><br /><hr /><br />
+<p>2. Upload your CSV.</p><button class="formy" type="submit">Upload CSV</button><br /><hr />
+</form>
+</div>
+
+<div class="exe"><br /><p>3. Convert your gradebook to Reg-ready format.</p>
+<button class="w3-button w3-white w3-border w3-border-red w3-round-large" style="font-size: 20px;" onclick="location.href='{% url 'script' %}'">Convert</button>
+        {% if data %}
+
+        {{data | safe}}
+
+       {% endif %}
+</div>
+
+
+<!-- <div class="dl">
+<a href="http://127.0.0.1:8000/output/rg-ready.csv"><button style="font-size: 20px;">Download</button></a>
+</div> -->
+<!--<div class="dl-but">-->
+<!--<button class="w3-button w3-block w3-red" style="font-size: 20px;width:50%;margin: 0 auto;" onclick="location.href='{% url 'delete' %}'">Download files</button>-->
+<!--        {% if data %}-->
+
+<!--        {{data | safe}}-->
+
+<!--        {% endif %}-->
+<!--</div>-->
+
+
+{% endblock %}
